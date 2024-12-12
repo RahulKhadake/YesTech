@@ -1,0 +1,6 @@
+.ag-theme-quartz {
+    --ag-foreground-color: red;
+}
+.ag-theme-quartz .ag-header-cell {
+    font-style: italic;
+}

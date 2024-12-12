@@ -1,0 +1,294 @@
+
+
+<div class="container mt-4">
+    <div class="card">
+      <div class="card-header bg-primary text-white">
+        <h5 class="mb-0">{{ isEditMode ? 'Edit User' : 'Add User' }}</h5>
+        
+      </div>
+      <div class="card-body">
+        <form >
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <label for="client" class="form-label">Client:</label>
+              <input type="text" id="client" class="form-control" name="client" [(ngModel)]="userData.Client" placeholder="Enter Client">
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="gstNo" class="form-label">GST No:</label>
+              <input type="text" id="gstNo" class="form-control" name="gstNo"  [(ngModel)]="userData.gstNo" placeholder="Enter GST No">
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="panNo" class="form-label">PAN No:</label>
+              <input type="text" id="panNo" class="form-control" name="panNo" [(ngModel)]="userData.panNo" placeholder="Ex: AAECN1449C">
+            </div>
+            </div>
+         
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <label for="code" class="form-label">Name:</label>
+              <input type="text" id="code" class="form-control" name="name" [(ngModel)]="userData.name" placeholder="Enter name">
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="address" class="form-label">Address:</label>
+              <textarea id="address" class="form-control" name="address" [(ngModel)]="userData.address" placeholder="Enter address" rows="3"></textarea>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="code" class="form-label">Code:</label>
+              <input type="text" id="code" class="form-control" name="code" [(ngModel)]="userData.code" placeholder="Enter Code">
+            </div>
+
+            
+          </div>
+           
+            <div class="row">
+              <!-- City Field -->
+              <div class="col-md-4 mb-3">
+                <label for="city" class="form-label">City:</label>
+                <input
+                  type="text"
+                  id="city"
+                  class="form-control"
+                  name="city"
+                  [(ngModel)]="userData.city"
+                  placeholder="Enter City"
+                />
+              </div>
+            
+              <!-- State Field -->
+              <div class="col-md-4 mb-3">
+                <label for="state" class="form-label">State:</label>
+                <input
+                  type="text"
+                  id="state"
+                  class="form-control"
+                  name="state"
+                  [(ngModel)]="userData.state"
+                  placeholder="Enter State"
+                />
+              </div>
+            
+              <!-- Country Field -->
+              <div class="col-md-4 mb-3">
+                <label for="country" class="form-label">Country:</label>
+                <input
+                  type="text"
+                  id="country"
+                  class="form-control"
+                  name="country"
+                  [(ngModel)]="userData.country"
+                  placeholder="Enter Country"
+                />
+              </div>
+            </div>
+          
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <label for="pincode" class="form-label">Pincode:</label>
+              <input type="text" id="pincode" class="form-control" name="pincode" [(ngModel)]="userData.pincode" placeholder="Enter Pincode">
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="latitude" class="form-label">Latitude:</label>
+              <input type="text" id="latitude" class="form-control" name="latitude" [(ngModel)]="userData.latitude" placeholder="Enter Latitude">
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="longitude" class="form-label">Longitude:</label>
+              <input type="text" id="longitude" class="form-control" name="longitude" [(ngModel)]="userData.longitude" placeholder="Enter Longitude">
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <label for="mobile" class="form-label">Mobile No:</label>
+              <input type="text" id="mobile" class="form-control" name="mobileNo" [(ngModel)]="userData.mobileNo" placeholder="Enter Mobile No">
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="email" class="form-label">Email:</label>
+              <input type="email" id="email" class="form-control" name="email" [(ngModel)]="userData.email" placeholder="Enter Email">
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="currency" class="form-label">Currency:</label>
+              <input type="text" id="currency" class="form-control" name="currency" [(ngModel)]="userData.currency" placeholder="Enter Currency">
+            </div>
+          </div>
+        </form>
+        <hr>
+          <!-- Section: Contact Person Detail -->
+           <!-- <div class="border-top mt-4 pt-4">
+            <h5 class="text-center">Contact Person Detail</h5>
+            <div class="row">
+              <div class="col-md-12 mb-12 d-flex justify-content-end align-items-center mt-4">
+                <button type="submit" class="btn btn-success me-2"><i class="fa-solid fa-plus"></i>Add</button>
+                <button type="button" class="btn btn-danger"><i class="fa-solid fa-xmark"></i>Cancel</button>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="personName" class="form-label">Name:</label>
+                <input type="text" id="personName" class="form-control" placeholder="Enter Person Name">
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="mobile" class="form-label">Mobile:</label>
+                <input type="text" id="mobile" class="form-control" placeholder="Enter Mobile">
+              </div>
+              
+              <div class="col-md-4 mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" id="email" class="form-control" placeholder="Enter Email">
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                <label for="designation" class="form-label">Deperment:</label>
+                <input type="text" id="deperement" class="form-control" placeholder="Enter deperement">
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="designation" class="form-label">Designation:</label>
+                <input type="text" id="designation" class="form-control" placeholder="Enter Designation">
+              </div>
+              
+            </div>
+          </div>  -->
+       
+
+          
+          <div class="border-top mt-4 pt-4">
+            <h5 class="text-center">Contact Person Detail</h5>
+          
+            <!-- Add and Cancel Buttons -->
+            <div class="row">
+              <div class="col-md-12 mb-12 d-flex justify-content-end align-items-center mt-4">
+                <button type="button" class="btn btn-success me-2" (click)="addContactPerson()">
+                  <i class="fa-solid fa-plus"></i> Add
+                </button>
+                <button type="button" class="btn btn-danger">
+                  <i class="fa-solid fa-xmark"></i> Cancel
+                </button>
+              </div>
+            </div>
+          
+            <!-- Dynamic Form -->
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+              <div formArrayName="contactPersons">
+                <div *ngFor="let contact of contactPersons.controls; let i = index" [formGroupName]="i" class="row">
+                  <div class="col-md-4 mb-3">
+                    <label for="personName" class="form-label">Name:</label>
+                    <input type="text" class="form-control" formControlName="personName" placeholder="Enter Person Name">
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="mobile" class="form-label">Mobile:</label>
+                    <input type="text" class="form-control" formControlName="mobile" placeholder="Enter Mobile">
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control" formControlName="email" placeholder="Enter Email">
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="department" class="form-label">Department:</label>
+                    <input type="text" class="form-control" formControlName="department" placeholder="Enter Department">
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="designation" class="form-label">Designation:</label>
+                    <input type="text" class="form-control" formControlName="designation" placeholder="Enter Designation">
+                  </div>
+          
+                  <!-- Remove Button -->
+                  <div class="col-md-12 d-flex justify-content-end">
+                    <button type="button" class="btn btn-danger" (click)="removeContactPerson(i)">
+                      <i class="fa-solid fa-trash"></i> Remove
+                    </button>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Submit Button -->
+              <div class="row mt-4">
+                <div class="col-md-12 d-flex justify-content-end">
+                  <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid">
+                    <i class="fa-solid fa-save"></i> Save
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+ <!-- Displaying the Table -->
+ <div *ngIf="contactPersonsList.length > 0" class="mt-4">
+  <h5>Saved Contact Persons</h5>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Mobile</th>
+        <th>Email</th>
+        <th>Department</th>
+        <th>Designation</th>
+        <th>Actions</th> <!-- For edit and delete buttons -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let contact of contactPersonsList; let i = index">
+        <td>{{ contact.personName }}</td>
+        <td>{{ contact.mobile }}</td>
+        <td>{{ contact.email }}</td>
+        <td>{{ contact.department }}</td>
+        <td>{{ contact.designation }}</td>
+        <td>
+          <!-- Edit Button -->
+          <button type="button" class="btn btn-warning me-2" (click)="editContact(i)">
+            <i class="fa-solid fa-pencil-alt"></i> Edit
+          </button>
+
+          <!-- Delete Button -->
+          <button type="button" class="btn btn-danger" (click)="deleteContact(i)">
+            <i class="fa-solid fa-trash"></i> Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+
+
+
+
+          
+          
+          
+          
+         
+          
+          
+          
+      </div>
+    </div>
+    <div class="text-center">
+      <div class="row mt-4">
+        <div class="col-12">
+          <button type="button" class="btn btn-primary me-2" (click)="onSave()" >
+            <i class="fa-solid fa-check"></i> {{ isEditMode ? 'Update ' : 'Save' }}
+          </button>
+          <button type="button" class="btn btn-danger"  (click)="Cancel()" >
+            <i class="fa-solid fa-xmark"></i> Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+  <!-- Success message -->
+<div *ngIf="successMessage" class="alert alert-success" role="alert">
+  {{ successMessage }}
+</div>
+
+
+
+
+
+
+
