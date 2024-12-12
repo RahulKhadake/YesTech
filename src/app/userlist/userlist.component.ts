@@ -2,13 +2,6 @@ import { Component } from '@angular/core';
 import { UserService } from '../UserService/user.service';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
-
-
-
-
-
-
-
 @Component({
   selector: 'app-userlist',
   standalone: true,
@@ -45,7 +38,7 @@ trackById(index: number, user: any): any {
 
 
 viewUser(userId: any) {
-  debugger
+  
   this.router.navigate(['/view-user', userId]); // Pass user ID as a parameter
 }
 

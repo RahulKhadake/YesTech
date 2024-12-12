@@ -52,7 +52,6 @@ removeContactPerson(index: number): void {
   this.contactPersons.removeAt(index);
 }
 
-// Submit the form and display data in a table
  // Submit the form and display data in a table
  onSubmit(): void {
   if (this.editingIndex !== null) {

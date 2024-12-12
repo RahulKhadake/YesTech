@@ -13,11 +13,6 @@ import { UserService } from '../UserService/user.service';
 export class ViwemodeComponent {
   userId: any; // Store the ID from the route
   userData: any 
-
-
-
-
-
   constructor(
     private route: ActivatedRoute,
     private router:Router,
